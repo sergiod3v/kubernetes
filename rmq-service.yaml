@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: vpromq01 # Service name to contact it
+spec:
+  selector:
+    app: vprormq
+  type: ClusterIP
+  ports:
+  - name: vprormq-service-port
+    port: 15672
+    targetPort: vprormq-port
